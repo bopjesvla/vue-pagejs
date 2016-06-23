@@ -4,6 +4,8 @@ A [page.js](https://github.com/visionmedia/page.js) wrapper for Vue.
 
 An example:
 
+*Entry*
+
 ```js
 import vuePage from 'vue-pagejs'
 Vue.use(vuePage)
@@ -25,8 +27,15 @@ vm.$page()
 vm.$mount("body")
 ```
 
-Plain objects are automatically merged with the data object of the Vue instance when the route is visited.
+*App.vue*
 
 ```html
-<component :is="$root.main">
+<template>
+	<component :is="$root.main">
+</template>
+<script>
+	import {Auth, Home} from 'somewhere'
+</script>
 ```
+
+Plain objects are automatically merged with the data object of the Vue instance when the route is visited.
